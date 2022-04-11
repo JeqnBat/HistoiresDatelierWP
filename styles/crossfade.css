@@ -1,0 +1,66 @@
+/* FULL SCREEN CROSSFADE SLIDER
+________________________________________________________ */
+.crossfade {
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+/* Slider */
+.crossfade figure {
+  animation: imageAnimation 32s ease-in-out infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover!important;
+  background-position: center center!important;
+  background-blend-mode: overlay!important;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+}
+/* Delete top padding */
+.crossfade .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+  padding: 0!important;
+}
+/* Animation delay trick */
+.crossfade figure:nth-child(1) { 
+  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/03/1.jpg);
+}
+.crossfade figure:nth-child(2) {
+  animation-delay: 8s;
+  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/03/2.jpg);
+}
+.crossfade figure:nth-child(3) {
+  animation-delay: 16s;
+  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/03/3.jpg);
+}
+.crossfade figure:nth-child(4) {
+  animation-delay: 24s;
+  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/03/4.jpg);
+}
+/* Animation */
+@keyframes imageAnimation {
+  0% {
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+  }
+  1% {
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  26% {
+    opacity: 1
+  }
+  27% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
