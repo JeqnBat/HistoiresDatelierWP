@@ -1,0 +1,6 @@
+/* FOOTER
+________________________________________________________ */
+/* footer centered horizontally width > 992px */
+.site-footer:not(.dynamic-footer) {
+  margin: 0 auto;
+}

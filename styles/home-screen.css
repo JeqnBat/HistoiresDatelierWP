@@ -38,17 +38,22 @@ ________________________________________________________ */
 ul.main-header-menu li a {
   font-family: 'arnoPro'!important;
   color: var(--logo-primary)!important;
-  font-weight: 500;
-  line-height: 100px;
-  border-bottom: 2px solid transparent;
-  letter-spacing: 0;
 }
-/* SUBTITLE MIDDLE PAGE */
-.subtitle h1 {
-  font-family: 'arnoPro'!important;
-  font-size: 2rem!important;
-  letter-spacing: 12px!important;
-  color: var(--logo-primary)!important;
+/* SUB MENU */
+.ast-builder-menu-1 .sub-menu {
+  border-color: var(--font-color-primary)!important;
+  line-height: 3rem!important;
+}
+.ast-builder-menu-1 .sub-menu a {
+  text-transform: lowercase;
+  padding: 20px 40px!important;
+  transition: all .1s ease-in-out!important;
+}
+.ast-builder-menu-1 .sub-menu li:not(:first-child) {
+  border-top: 1px solid rgb(231, 231, 231)!important;
+}
+.ast-builder-menu-1 .sub-menu a:hover {
+  background-color:rgb(231, 231, 231)!important;
 }
 /* BG CLEAR */
 .ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single:not(.ast-related-post) {
