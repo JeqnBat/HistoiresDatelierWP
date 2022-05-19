@@ -1,111 +1,51 @@
-<style>
-#home-screen-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#home-screen-cta fieldset {
-  border: none;
-  color: black;
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-#home-screen-cta fieldset legend {
-  font-size: 1rem;
-  color: slategray;
-  transform: translate(30px, 42px);
-  transition: all .2s ease-in-out;
-  pointer-events: none;
-  line-height: 1rem;
-}
-.focused {
-  font-size: .9rem!important;
-  transform: translate(0, 0)!important;
-  color: antiquewhite!important;
-  line-height: 1rem;
-}
-#home-screen-cta fieldset select {
-  font-family: sans-serif;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  width: 700px;
-  min-height: 60px;
-  padding: 20px;
-  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 60px;
-}
-#home-screen-cta fieldset select option {
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-#home-screen-cta button {
-  opacity: 0.7;
-  font-family: sans-serif;
-  font-size: 1rem;
-  min-height: 60px;
-  border: 2px solid transparent;
-  margin: 0 5px;
-  color: rgb(201, 199, 199);
-  background-color: grey;
-  padding: 15px;
-  transition: all .1s ease-in-out;
-  margin-left: 10px;
-}
-#home-screen-cta button:hover {
-  cursor: pointer;
-  border: 2px solid white;
-}
-.focused-2 {
-  color: white!important;
-  background-color: slategray!important;
-  opacity: 1!important;
-}
-</style>
-<form id="home-screen-cta">
-  <fieldset>
-    <legend id="legend">Que souhaitez-vous faire ?</legend>
-    <select id="cta" type="select" name="cta">
-      <option value=""></option>
-      <option value="papeterie">Imprimer de beaux faire-part</option>
-      <option value="set-design">Mettre en scène mon événement</option>
-    </select>
-    <button type="button" form="home-screen-cta" onclick="ontoSelection()">c'est parti !</button>
-  </fieldset>
-</form>
+<nav id="form-wrapper">
+  <div id="form-spacer"></div>
+  <form id="home-screen-cta">
+    <div style="width:102px"></div>
+    <fieldset>
+      <legend id="legend">Que souhaitez-vous faire ?</legend>
+      <select id="cta" type="select" name="cta">
+        <option value=""></option>
+        <option value="papeterie">Imprimer de beaux faire-part</option>
+        <option value="set-design">Mettre en scène mon événement</option>
+      </select>
+      <button type="button" form="home-screen-cta" onclick="ontoSelection()">c'est parti !</button>
+    </fieldset>
+  </form>
+</nav>
 <script>
-const legend = document.querySelector('#home-screen-cta legend')
-const button = document.querySelector('#home-screen-cta button')
-const select = document.querySelector('#home-screen-cta select')
-let selectedOption = select.value
-select.addEventListener('change', () => {
-  selectedOption = select.value
-  if (selectedOption.length > 0) {
-    button.classList.add('focused-2')
-  } else if (selectedOption.length === 0) {
-    button.classList.remove('focused-2')
-  }
-})
-const ontoSelection = () => {
-  if (selectedOption.length > 0) {
-    window.open(`./${selectedOption}/index.html`, "_self")
-  } else {
-    return
-  }
-}
-const focusSelect = () => {
-  select.addEventListener('focus', () => {
-    legend.classList.add('focused')
-  })
-  select.addEventListener('blur', () => {
-    legend.classList.remove('focused')
-    select.options[0].selected = true
-    if (button.classList.contains('focused-2')) {
+  const legend = document.querySelector('#home-screen-cta legend')
+  const button = document.querySelector('#home-screen-cta button')
+  const select = document.querySelector('#home-screen-cta select')
+  let selectedOption = select.value
+  select.addEventListener('change', () => {
+    selectedOption = select.value
+    if (selectedOption.length > 0) {
+      button.classList.add('focused-2')
+    } else if (selectedOption.length === 0) {
       button.classList.remove('focused-2')
+    }
+  })
+  const ontoSelection = () => {
+    if (selectedOption.length > 0) {
+      window.open(`./${selectedOption}/`, "_self")
     } else {
       return
     }
-  })
-}
-focusSelect()
+  }
+  const focusSelect = () => {
+    select.addEventListener('focus', () => {
+      legend.classList.add('focused')
+    })
+    select.addEventListener('blur', () => {
+      legend.classList.remove('focused')
+      select.options[0].selected = true
+      if (button.classList.contains('focused-2')) {
+        button.classList.remove('focused-2')
+      } else {
+        return
+      }
+    })
+  }
+  focusSelect()
 </script>

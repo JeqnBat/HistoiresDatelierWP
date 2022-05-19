@@ -1,6 +1,51 @@
 /* FOOTER
 ________________________________________________________ */
-/* footer centered horizontally width > 992px */
-.site-footer:not(.dynamic-footer) {
-  margin: 0 auto;
+/* Wrapper */
+@media (min-width: 992px) {
+  .site-footer:not(.dynamic-footer) {
+    min-width: 100vw!important;
+    background: var(--font-color-primary);
+    padding: 200px 20px;
+  }
+}
+.site-above-footer-wrap[data-section="section-above-footer-builder"] {
+  background: none;
+}
+#footer-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: var(--bg-primary);
+  background: var(--font-color-primary);
+}
+.footer-el:first-child {
+  transform: translateY(-60px);
+}
+.footer-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: 20px;
+}
+/* Left logo */
+#footer-logo p:first-child {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  line-height: 50px;
+  margin: 0;
+}
+#footer-logo p:nth-child(2) {
+  font-size: 1rem;
+  letter-spacing: 6px;
+  margin: 0;
+}
+#footer-logo {
+  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/05/bgCONTAIN_WHITE.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 43px 0;
 }

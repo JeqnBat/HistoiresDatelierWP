@@ -1,13 +1,39 @@
-/* HOME SCREEN
-________________________________________________________ */
-/* LOGO */
+/** 
+ * HOME SCREEN
+ */
+/* ===================== INDEX =====================
+
+  1. HEADER LAYOUT
+  2. HEADER LEFT
+  3. HEADER RIGHT
+  4. CTA
+  5. MAIN PAGE CONTENT
+  6. INSTAGRAM PLUG IN
+
+/* 1. HEADER LAYOUT
+ ________________________________________________________ */
+/* Increases Header Width */
+.site-header:not(.dynamic-header) {
+  max-width: 100%!important;
+}
+/* Sets Homepage Background Picture */
+#bg-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/bg-wrapper.webp) no-repeat;
+  background-size: cover;
+}
+/* 2. HEADER LEFT
+ ________________________________________________________ */
+/* Sets Main Logo */
 .site-branding {
-  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/03/bgCONTAIN.png);
+  background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/bgCONTAIN.png);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 50px 0 40px 0!important;
+  padding: 70px 0 60px 0!important;
 }
+/* Sets Logo Fonts */
 .site-title a {
   font-family: 'kallinsharegular'!important;
   font-size: 3rem;
@@ -15,79 +41,145 @@ ________________________________________________________ */
   color: var(--logo-primary)!important;
 }
 .site-header .site-description {
-  text-transform: uppercase!important;
   font-family: 'ArnoPro'!important;
   letter-spacing: 8px;
   text-align:center;
 }
+/* 3. HEADER RIGHT
+ ________________________________________________________ */
+/* Decreases Font Size */
 .site-header li {
   font-size: 1.2rem!important;
 }
-/* HEADER */
-.site-header:not(.dynamic-header) {
-  max-width: 100%!important;
-}
-.page-header {
-  display: none;
-}
-.main-header-bar {
-  border: none;
-  background: transparent!important;
-}
-/* MAIN MENU */
+/* Sets Main Menu Fonts */
 ul.main-header-menu li a {
   font-family: 'arnoPro'!important;
   color: var(--logo-primary)!important;
-}
-/* SUB MENU */
-.ast-builder-menu-1 .sub-menu {
-  border-color: var(--font-color-primary)!important;
-  line-height: 3rem!important;
-}
-.ast-builder-menu-1 .sub-menu a {
-  text-transform: lowercase;
-  padding: 20px 40px!important;
+  border-bottom: 2px solid transparent;
+  padding: 0!important;
+  margin: 0 1em;
   transition: all .1s ease-in-out!important;
 }
-.ast-builder-menu-1 .sub-menu li:not(:first-child) {
-  border-top: 1px solid rgb(231, 231, 231)!important;
+/* Adds Main Categories Hover effect */
+ul.main-header-menu li a:hover {
+  border-bottom: 2px solid var(--font-color-primary)!important;
 }
-.ast-builder-menu-1 .sub-menu a:hover {
-  background-color:rgb(231, 231, 231)!important;
+/* Removes Top Blue Border */
+.ast-builder-menu-1 .sub-menu {
+  border: 0!important;
+  line-height: 3rem!important;
+  padding: 15px;
+  width: 250px;
 }
-/* BG CLEAR */
-.ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single:not(.ast-related-post) {
-  background-color: transparent;
+/* Adds Separator Between SubCats */
+.sub-menu :not(:last-child) {
+  border-bottom: 1px solid rgb(29, 29, 29, .2);
+}
+/* Removes Global Hover Effect for Subcategories */
+ul.sub-menu li a:hover {
+  border-bottom: none!important;
 }
 header h1.entry-title {
   display: none;
 }
-/* HOME SCREEN BG PICTURE */
-.background-picture {
-  position: absolute;
-  background: url(http://home.histoiresdatelier.com/wp-content/uploads/2022/03/4.jpg);
-  background-size: cover!important;
-  background-position: center center!important;
-  height: 100vh;
-  width: 100vw;
-  inset: 0;
+/* 4. CTA
+________________________________________________________ */
+#home-screen-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* INSTAGRAM BUTTON */
-.insta-gallery-feed .insta-gallery-actions {
-  text-align: right!important;
-  margin: 0!important;
-  transform: translateY(-220px);
+#home-screen-cta fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: rgb(29, 29, 29);
+  font-family: sans-serif;
+  font-size: 1rem;
 }
-.insta-gallery-feed .insta-gallery-actions a {
-  transition: all .1s ease-in-out!important;
+#home-screen-cta fieldset legend {
+  font-size: 1rem;
+  color: slategray;
+  transform: translate(30px, 67px);
+  transition: all .2s ease-in-out;
+  pointer-events: none;
 }
-.insta-gallery-feed .insta-gallery-actions a:hover {
-  opacity: 0.5;
+.focused {
+  transform: translate(20px, 30px)!important;
+  color: antiquewhite!important;
 }
-.insta-gallery-feed .insta-gallery-actions .insta-gallery-button.follow {
-  background-color: var(--bg-primary)!important;
-  color: var(--font-color-primary)!important;
-  font-family: var(--font-primary)!important;
-  font-size: var(--main-size)!important;
-  padding: 0!important;
+#home-screen-cta fieldset select {
+  font-family: sans-serif;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  width: 600px;
+  min-height: 50px;
+  padding: 15px;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 50px;
+  background: rgb(255,255,255, .9);
+}
+#home-screen-cta fieldset select option {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+#home-screen-cta button {
+  opacity: 0;
+  background: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+  width: 120px;
+  min-height: 50px;
+  color: rgb(29, 29, 29);
+  padding: 15px;
+  margin: 30px;
+  transition: background-color .1s ease-in-out .2s;
+}
+#home-screen-cta button.focused-2:hover {
+  cursor: pointer;
+  opacity: 1!important;
+}
+.focused-2 {
+  opacity: 0.9!important;
+  color: white!important;
+  background-color:rgb(29, 29, 29)!important;
+}
+/* 5. MAIN PAGE CONTENT
+________________________________________________________ */
+#latelier h2 {
+  font-family: var(--font-title);
+  font-size: 4rem!important;
+  font-weight: 100!important;
+}
+#prestations h2 {
+  font-family: var(--font-title);
+  font-size: 4rem!important;
+  font-weight: 100!important;
+}
+.presta-category {
+  cursor: pointer;
+}
+#presta-1 {
+  background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/presta1.webp) no-repeat;
+  background-size: cover;
+}
+#presta-2 {
+  background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/presta2.webp) no-repeat;
+  background-size: cover;
+}
+#presta-3 {
+  background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/presta3.webp) no-repeat;
+  background-size: cover;
+}
+/* 6. INSTAGRAM PLUG-IN
+________________________________________________________ */
+/* Moves Button */
+#sb_instagram #sbi_load .sbi_load_btn {
+  font-size: 16px!important;
+}
+#sb_instagram #sbi_load .sbi_follow_btn a {
+  font-size: 16px!important;
 }
