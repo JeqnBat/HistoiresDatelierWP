@@ -1,2 +1,7 @@
-/* 4. MOBILE LAYOUT
+/**
+ * GLOBAL CSS FILE FOR RESPONSIVE DEVICES
+ */
+ 
+/* 0. IMPORTS
 ________________________________________________________ */
+@import 'responsive/R_home-screen.css';

@@ -177,6 +177,16 @@ ________________________________________________________ */
 /* 6. INSTAGRAM PLUG-IN
 ________________________________________________________ */
 /* Moves Button */
+#sb_instagram {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#sb_instagram #sbi_load {
+  margin-bottom: 20px;
+  margin-right: 5vw;
+  width: auto;
+  text-align: right;
+}
 #sb_instagram #sbi_load .sbi_load_btn {
   font-size: 16px!important;
 }

@@ -1,0 +1,82 @@
+/**
+ * RESPONSIVE HOME SCREEN
+ */
+@media (max-width: 544px) {
+/* 1. HEADER
+________________________________________________________ */
+  #ast-mobile-header .ast-builder-grid-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-column-gap: 20px;
+    overflow-wrap: anywhere;
+  }
+  #ast-mobile-header .site-title {
+    display: block;
+    text-align: center;
+  }
+  #ast-mobile-header .site-title a {
+    font-size: 4rem;
+  }
+  #ast-mobile-header .site-header-primary-section-left {
+    justify-content: center;
+    order: 1;
+  }
+  #ast-mobile-header .site-branding {
+    padding: 90px 0 90px 0!important;
+  }
+  #ast-mobile-header ul.main-header-menu {
+    align-items: flex-start;
+    z-index: 4;
+    position: fixed;
+    top: 45px;
+    padding: 50px 40px 200px 40px;
+    height: 95vh;
+  }
+  .ast-button-wrap {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  /* Set Responsive Hamburger Icon's color */
+  [data-section="section-header-mobile-trigger"] .ast-button-wrap .mobile-menu-toggle-icon .ast-mobile-svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--font-color-primary);
+    background: var(--bg-primary);
+  }
+  /* Display Site Descr */
+  .site-header .site-description {
+    display: block;
+  }
+  /* Set MENU LI font size */
+  .site-header li a {
+    font-size: 1.5rem!important;
+  }
+/* 2. INSTAGRAM FEED
+________________________________________________________ */
+  #sb_instagram {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #sbi_load {
+    margin-bottom: 15px;
+  }
+  #sb_instagram #sbi_load .sbi_load_btn {
+    display: none;
+  }
+/* 3. FOOTER
+________________________________________________________ */
+  #social-icons {
+    margin-top: 100px;
+  }
+  .site-above-footer-wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .site-above-footer-wrap[data-section="section-above-footer-builder"].ast-footer-row-mobile-stack .site-footer-section {
+    display: block;
+    margin-bottom: 0;
+  }
+}
