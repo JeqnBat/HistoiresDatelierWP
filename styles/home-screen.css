@@ -159,6 +159,11 @@ ________________________________________________________ */
   font-size: 4rem!important;
   font-weight: 100!important;
 }
+#instagram h2 {
+  font-family: var(--font-title);
+  font-size: 4rem!important;
+  font-weight: 100!important;
+}
 .presta-category {
   cursor: pointer;
 }
@@ -177,15 +182,8 @@ ________________________________________________________ */
 /* 6. INSTAGRAM PLUG-IN
 ________________________________________________________ */
 /* Moves Button */
-#sb_instagram {
-  display: flex;
-  flex-direction: column-reverse;
-}
-#sb_instagram #sbi_load {
-  margin-bottom: 20px;
-  margin-right: 5vw;
-  width: auto;
-  text-align: right;
+.sbi_follow_btn {
+
 }
 #sb_instagram #sbi_load .sbi_load_btn {
   font-size: 16px!important;

@@ -5,7 +5,12 @@ ________________________________________________________ */
   .site-footer:not(.dynamic-footer) {
     min-width: 100vw!important;
     background: var(--logo-primary);
-    padding: 140px 0 20px 0;
+  }
+}
+/* Folow us responsive */
+@media (max-width: 590px) {
+  #social-icons {
+    transform: translateY(-150px)!important;
   }
 }
 .site-above-footer-wrap[data-section="section-above-footer-builder"] {
@@ -58,11 +63,12 @@ ________________________________________________________ */
 #social-icons {
   position: relative;
   display: flex;
+  color: var(--font-color-primary);
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100vw;
-  margin-bottom: 50px;
+  transform: translateY(-110px);
 }
 #social-icons::before {
   content: 'Suivez-nous !';
@@ -76,11 +82,11 @@ footer .elementor-icon {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
-  color: var(--bg-primary);
-  font-size: 40px;
+  color: var(--font-color-primary);
+  font-size: 30px;
   font-weight: lighter;
   text-align: center;
-  margin: 10px;
+  margin: 5px;
   transition: all .1s ease-in-out;
   cursor: pointer;
 }
