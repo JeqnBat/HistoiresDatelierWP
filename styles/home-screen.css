@@ -6,18 +6,26 @@
   1. HEADER LAYOUT
   2. HEADER LEFT
   3. HEADER RIGHT
-  4. CTA
-  5. MAIN PAGE CONTENT
-  6. INSTAGRAM PLUG IN
+  4. MAIN PAGE CONTENT
+  5. INSTAGRAM PLUG IN
 
 /* 1. HEADER LAYOUT
  ________________________________________________________ */
+ @media (min-width: 921px) {
+  .ast-theme-transparent-header #masthead {
+    position: relative!important;
+    left: 0;
+    right: 0;
+  }
+}
 /* Increases Header Width */
 .site-header:not(.dynamic-header) {
   max-width: 100%!important;
 }
 /* Sets Homepage Background Picture */
 #bg-wrapper {
+  position: absolute;
+  inset: 0;
   height: 100vh;
   width: 100vw;
   background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/bg-wrapper.webp) no-repeat;
@@ -82,72 +90,7 @@ ul.sub-menu li a:hover {
 header h1.entry-title {
   display: none;
 }
-/* 4. CTA
-________________________________________________________ */
-#home-screen-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#home-screen-cta fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  color: rgb(29, 29, 29);
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-#home-screen-cta fieldset legend {
-  font-size: 1rem;
-  color: slategray;
-  transform: translate(30px, 67px);
-  transition: all .2s ease-in-out;
-  pointer-events: none;
-}
-.focused {
-  transform: translate(20px, 30px)!important;
-  color: antiquewhite!important;
-}
-#home-screen-cta fieldset select {
-  font-family: sans-serif;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  width: 600px;
-  min-height: 50px;
-  padding: 15px;
-  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 50px;
-  background: rgb(255,255,255, .9);
-}
-#home-screen-cta fieldset select option {
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-#home-screen-cta button {
-  opacity: 0;
-  background: none;
-  font-family: sans-serif;
-  font-size: 1rem;
-  width: 120px;
-  min-height: 50px;
-  color: rgb(29, 29, 29);
-  padding: 15px;
-  margin: 30px;
-  transition: background-color .1s ease-in-out .2s;
-}
-#home-screen-cta button.focused-2:hover {
-  cursor: pointer;
-  opacity: 1!important;
-}
-.focused-2 {
-  opacity: 0.9!important;
-  color: white!important;
-  background-color:rgb(29, 29, 29)!important;
-}
-/* 5. MAIN PAGE CONTENT
+/* 4. MAIN PAGE CONTENT
 ________________________________________________________ */
 #latelier h2 {
   font-family: var(--font-title);
@@ -179,12 +122,8 @@ ________________________________________________________ */
   background: url(https://home.histoiresdatelier.com/wp-content/uploads/2022/05/presta3.webp) no-repeat;
   background-size: cover;
 }
-/* 6. INSTAGRAM PLUG-IN
+/* 5. INSTAGRAM PLUG-IN
 ________________________________________________________ */
-/* Moves Button */
-.sbi_follow_btn {
-
-}
 #sb_instagram #sbi_load .sbi_load_btn {
   font-size: 16px!important;
 }

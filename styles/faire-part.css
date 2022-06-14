@@ -1,0 +1,10 @@
+/* FAIRE-PART
+________________________________________________________ */
+.papeterie-title h2 {
+  font-family: var(--font-title)!important;
+  font-size: 4rem!important;
+  font-weight: 100!important;
+}
+.step h1 {
+  font-size: 4rem!important;
+}

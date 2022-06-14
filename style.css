@@ -25,6 +25,7 @@ Template: astra
 ________________________________________________________ */
 @import 'styles/mobile.css';
 @import 'styles/home-screen.css';
+@import 'styles/faire-part.css';
 @import 'styles/footer.css';
 
 /* 1. VARIABLES & BODY
@@ -36,6 +37,17 @@ ________________________________________________________ */
   --font-primary: 'ArnoPro'!important;
   --font-title: 'kallinsharegular'!important;
   --main-size: 20px;
+}
+h1 {
+  font-family: var(--font-title)!important;
+  font-size: 4rem!important;
+}
+h4 {
+  font-family: var(--font-title)!important;
+  font-size: 1.75rem!important;
+}
+.arrow-down {
+  transform: translateY(-24vh)!important;
 }
 body {
   background-color: var(--bg-primary);
@@ -52,6 +64,10 @@ body {
 .ast-plain-container, .ast-page-builder-template {
   background-color: var(--bg-primary);
   background-image: none;
+}
+h2 {
+  font-family: var(--font-primary);
+  font-size: 2.5rem!important;
 }
 /* 2. CUSTOM FONTS
 ________________________________________________________ */
